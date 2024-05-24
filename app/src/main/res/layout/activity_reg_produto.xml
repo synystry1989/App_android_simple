@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context=".regProdutoActivity">
+
+
+    <EditText
+        android:id="@+id/text_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3F51B5"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:inputType="text"
+        android:padding="15sp"
+        android:text="Registar produto"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="320sp"
+        android:background="@drawable/corners2"
+
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="113dp"
+            android:layout_height="match_parent"
+
+            android:background=""
+
+            tools:srcCompat="@android:drawable/ic_input_add"
+            />
+
+        <LinearLayout
+            android:layout_width="237dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edit_nomeProduto"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:ems="10"
+                android:gravity=""
+                android:hint="Nome Produto"
+                android:textColorHint="@color/black"
+                android:inputType="text"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/edit_preco"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:ems="10"
+                android:gravity=""
+                android:hint="Preço"
+                android:textSize="20sp"
+                android:textColorHint="@color/black"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/edit_quantidade"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:ems="10"
+                android:gravity=""
+                android:hint="Nome Produto"
+                android:textColorHint="@color/black"
+                android:inputType="number"
+                android:textSize="20sp"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_avancar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        android:backgroundTint="#A81C12"
+        android:text="Confirmar"
+        android:textColor="#F4F4F4" />
+
+
+</LinearLayout>
