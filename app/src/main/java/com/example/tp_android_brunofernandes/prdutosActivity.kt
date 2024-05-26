@@ -19,7 +19,7 @@ class prdutosActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val i = intent
-
+//preencher os text com os valores vindos da atividade anterior
         binding.textNomePrdt.setText(i.getStringExtra("produto",))
         binding.textPreco.setText(i.getStringExtra("preco"))
         binding.textQtd.setText(i.getStringExtra("qtd"))
@@ -32,7 +32,7 @@ class prdutosActivity : AppCompatActivity() {
             startActivity(Intent(this, pagInicialActivity::class.java))
 
         }
-
+//levar valores para a atividade anterior
         binding.buttonRetroceder.setOnClickListener{
 
             i.putExtra("produto",binding.textNomePrdt.text.toString())

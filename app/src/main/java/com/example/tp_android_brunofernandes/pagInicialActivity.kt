@@ -14,13 +14,14 @@ class pagInicialActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val i = intent
-
+//receber o valor da variavel da actividade anterior
         val username = i.extras?.getString("user")
         if(username!= null) {
             binding.textBemVindo.text = "Bem-vindo ${username}"
         }else{
             binding.textBemVindo.text = "Escolha entre as opcoes:"
         }
+
         binding.buttonRegistar.setOnClickListener{
             startActivity(Intent(this, regProdutoActivity::class.java))
         }

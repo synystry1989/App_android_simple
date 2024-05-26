@@ -18,13 +18,13 @@ class regProdutoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRegProdutoBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+//leitura dados inseridos
         binding.buttonAvancar.setOnClickListener {
             var produto: String = binding.editNomeProduto.text.toString()
             var preco: String = binding.editPreco.text.toString()
             var quantidade: String = binding.editQuantidade.text.toString()
 
-
+//garantir preenchimento
             if (produto.isNotEmpty() && preco.isNotEmpty() && quantidade.isNotEmpty()) {
                 val i : Intent=Intent(this,prdutosActivity ::class.java)
                 i.putExtra("produto", produto)
@@ -38,7 +38,7 @@ class regProdutoActivity : AppCompatActivity() {
 
             }
 
-        }
+        }//receber os valores da atividade anterior
         result = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             if (it.data != null && it.resultCode==1){
                var produto = it.data?.getStringExtra("produto").toString()

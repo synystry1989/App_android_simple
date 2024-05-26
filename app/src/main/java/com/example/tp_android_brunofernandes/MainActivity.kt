@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             //verificacoes
             if (usernameA1 == username && passwordA1 == password || usernameA2 == username && passwordA2 == password || usernameA3 == username && passwordA3 == password) {
                 val i: Intent = Intent(this, pagInicialActivity ::class.java)
-                i.putExtra("user", username)
+                i.putExtra("user", username)//levar variavel para a proxima atividade
                 startActivity(i)
             } else {
                 Toast.makeText(
