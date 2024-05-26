@@ -9,6 +9,7 @@ import com.example.tp_android_brunofernandes.databinding.ActivityRegProdutoBindi
 
 
 
+
 class regProdutoActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegProdutoBinding
     private  lateinit var result: ActivityResultLauncher<Intent>
@@ -23,26 +24,29 @@ class regProdutoActivity : AppCompatActivity() {
             var preco: String = binding.editPreco.text.toString()
             var quantidade: String = binding.editQuantidade.text.toString()
 
-            if (produto.isEmpty() || preco.isEmpty() || quantidade.isEmpty()) {
-                Toast.makeText(applicationContext, "preencha todos os campos", Toast.LENGTH_SHORT).show()
-            } else
-            {
-                val i: Intent=Intent(this, prdutosActivity::class.java)
+
+            if (produto.isNotEmpty() && preco.isNotEmpty() && quantidade.isNotEmpty()) {
+                val i : Intent=Intent(this,prdutosActivity ::class.java)
                 i.putExtra("produto", produto)
-                i.putExtra("preco", preco)
-                i.putExtra("qtd", quantidade)
+                i.putExtra("preco", "$preco €")
+                i.putExtra("qtd", "$quantidade Un")
                 result.launch(i)
+            }
+            else
+            {
+                Toast.makeText(applicationContext, "preencha todos os campos", Toast.LENGTH_SHORT).show()
 
             }
-            result = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-                if (it.data != null && it.resultCode==1){
-                    produto = it.data?.getStringExtra("produto").toString()
-                    binding.editNomeProduto.setText(produto)
-                    preco = it.data?.getStringExtra("preco").toString()
-                    binding.editPreco.setText(preco) //pega o valor do preco
-                    quantidade = it.data?.getStringExtra("qtd").toString()
-                    binding.editQuantidade.setText(quantidade)
-                }
+
+        }
+        result = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+            if (it.data != null && it.resultCode==1){
+               var produto = it.data?.getStringExtra("produto").toString()
+                binding.editNomeProduto.setText(produto)
+               var preco = it.data?.getStringExtra("preco").toString()
+                binding.editPreco.setText(preco ) //pega o valor do preco
+                var quantidade = it.data?.getStringExtra("qtd").toString()
+                binding.editQuantidade.setText(quantidade)
             }
         }
     }

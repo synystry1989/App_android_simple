@@ -17,7 +17,9 @@ class pagInicialActivity : AppCompatActivity() {
 
         val username = i.extras?.getString("user")
         if(username!= null) {
-            binding.textBemVindo.text = "Olá ${username}"
+            binding.textBemVindo.text = "Bem-vindo ${username}"
+        }else{
+            binding.textBemVindo.text = "Escolha entre as opcoes:"
         }
         binding.buttonRegistar.setOnClickListener{
             startActivity(Intent(this, regProdutoActivity::class.java))

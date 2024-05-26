@@ -1,10 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".prdutosActivity">
+    android:orientation="vertical"
+    tools:context=".prdutosActivity"
+    android:background="@drawable/background">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/text_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#D5A720"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:inputType="text"
+        android:padding="15sp"
+        android:text="Produtos"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="244dp"
+        android:layout_height="223dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/fire"
+        android:layout_marginTop="150dp"/>
+
+    <LinearLayout
+        android:layout_width="249dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        >
+
+
+        <TextView
+            android:id="@+id/text_prdt"
+            android:layout_width="129dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corners2"
+            android:padding="10dp"
+            android:text="Produto:"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_nomePrdt"
+            android:layout_width="121dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="249dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/text2_preco"
+            android:layout_width="129dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corners2"
+            android:padding="10dp"
+            android:text="Preço:"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/text_preco"
+            android:layout_width="121dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:inputType="text"
+
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="249dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+       >
+
+
+        <TextView
+            android:id="@+id/text2_qtd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Quantidade:"
+            android:textColor="@color/black"
+            android:background="@drawable/corners2"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_qtd"
+            android:layout_width="123dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:inputType="text"
+
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+           />
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/button_gravar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gravar"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:backgroundTint="#A81C12"/>
+
+    <Button
+        android:id="@+id/button_retroceder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Retroceder"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#D5A720"
+        />
+
+
+
+</LinearLayout>
