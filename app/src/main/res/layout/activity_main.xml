@@ -14,7 +14,7 @@
         android:id="@+id/text_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#3F51B5"
+        android:background="#D5A720"
         android:fontFamily="sans-serif-condensed"
         android:gravity="center"
         android:inputType="text"
@@ -60,7 +60,6 @@
             android:layout_marginLeft="2dp"
             android:backgroundTint="#D6491C"
             android:ems="10"
-            android:hint="Username"
             android:inputType="text"
             android:textColorHint="@color/black"
             android:textStyle="italic" />
@@ -93,7 +92,7 @@
             android:layout_marginLeft="2dp"
             android:backgroundTint="#D6491C"
             android:ems="10"
-            android:hint="Password"
+
             android:inputType="textPassword"
             android:textColorHint="@color/black"
             android:textStyle="italic" />
